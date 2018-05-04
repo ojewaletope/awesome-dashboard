@@ -4,7 +4,7 @@
 .wrapper {
   position: relative;
   transition: 1s all cubic-bezier(0.64, 0.43, 0.25, 1);
-  transform: translateX(0);
+  // transform: translateX(0);
   z-index: 3;
   background: $brand-grey;
   min-height: 100%;
@@ -31,4 +31,7 @@ main {
   @media (max-width: 991px) {
     width: 100%;
   }
+}
+.panels {
+  margin-bottom: $spacing * 2;
 }

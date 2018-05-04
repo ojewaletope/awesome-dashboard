@@ -8,6 +8,7 @@
     <title>Awesome Dashboard</title>
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="assets/plugins/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="assets/plugins/introjs/introjs.min.css">
     <link rel="stylesheet" href="assets/css/bootsrap.css">
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
@@ -15,9 +16,9 @@
   <body>
 
     <div class="wrapper">
-      <header>
+      <header data-intro="Hello This is Header">
         <!-- Navbar lives here -->
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light" data-intro="Welcome to Navbar">
           <a class="navbar-brand" href="#">Navbar</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -52,7 +53,7 @@
         </nav>
       </header>
       <main>
-        <aside class="aside__left">
+        <aside class="aside__left" data-intro="Here is Aside">
           <ul class="aside__menuList">
             <li class="aside__items">
               <a href="#" class="aside__links d-flex">
@@ -90,40 +91,56 @@
           </ul>
         </aside>
         <section class="main-section">
-          <div class="panels">
+          <div class="panels" data-intro="Welcome to the panels section">
             <div class="row">
               <div class="col">
-                <div class="card">
+                <div class="card card--blue">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <h5 class="card-title">102</h5>
+                    <h6 class="card-subtitle mb-2">Projects</h6>
+                    <hr>
+                    <small>Last Week</small>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="card">
+                <div class="card card--gren">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <h5 class="card-title">102</h5>
+                    <h6 class="card-subtitle mb-2">Projects</h6>
+                    <hr>
+                    <small>Last Week</small>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="card">
+                <div class="card card--red">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <h5 class="card-title">102</h5>
+                    <h6 class="card-subtitle mb-2">Projects</h6>
+                    <hr>
+                    <small>Last Week</small>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="card">
+                <div class="card card--yellow">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <h5 class="card-title">102</h5>
+                    <h6 class="card-subtitle mb-2">Projects</h6>
+                    <hr>
+                    <small>Last Week</small>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="charts" data-intro="And finally the Chart section">
+            <div class="card">
+              <div class="card-body">
+                <canvas id="myChart"></canvas>
+              </div>
+
             </div>
           </div>
         </section>
@@ -134,12 +151,16 @@
     <script src="assets//plugins/popper.min.js"></script>
     <script src="assets//plugins/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets//plugins/notify.min.js"></script>
+    <script src="assets/plugins/Chart.bundle.min.js"></script>
+    <script src="assets/plugins/introjs/intro.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
       document.onreadystatechange = function () {
         if (document.readyState === 'complete') {
           //document ready
           app.asideController();
+          app.chartHandler();
+          app.introHandler();
         }
       }
     </script>

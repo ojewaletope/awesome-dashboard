@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik");
 *,
 *:before,
 *:after {
@@ -7,6 +8,7 @@
 html,
 body {
   height: 100%;
+  font-family: Rubik, 'Sans-serif';
 }
 
 body {
@@ -24,6 +26,46 @@ ul {
 a {
   color: #454343;
   text-decoration: none !important;
+}
+
+.card {
+  border-radius: 0;
+}
+
+.card .card-body {
+  text-align: center;
+}
+
+.card .card-body hr {
+  max-width: 100px;
+}
+
+.card .card-title {
+  font-weight: 900;
+}
+
+.card hr {
+  border-top: 2px solid #fff;
+}
+
+.card--red {
+  background-color: #ff1744;
+  color: #fff;
+}
+
+.card--blue {
+  background-color: #0277bd;
+  color: #fff;
+}
+
+.card--gren {
+  background-color: #1b5e20;
+  color: #fff;
+}
+
+.card--yellow {
+  background-color: #ffeb3b;
+  color: #fff;
 }
 
 header {
@@ -56,7 +98,6 @@ header {
 .wrapper {
   position: relative;
   transition: 1s all cubic-bezier(0.64, 0.43, 0.25, 1);
-  transform: translateX(0);
   z-index: 3;
   background: #eeeeee;
   min-height: 100%;
@@ -88,6 +129,10 @@ main {
   .main-section {
     width: 100%;
   }
+}
+
+.panels {
+  margin-bottom: 30px;
 }
 
 .aside__left,
