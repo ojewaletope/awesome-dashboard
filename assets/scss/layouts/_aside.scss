@@ -1,0 +1,40 @@
+.aside__left,
+.aside__right {
+  width: $aside-width;
+  height: 100%;
+  background: $brand-white;
+  // padding: $spacing 0;
+  position: fixed;
+}
+.aside__left {
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+.aside__right {
+  top: 0;
+  right: 0;
+  display: none;
+  @media (max-width: 991px) {
+    display: block;
+  }
+}
+
+.aside__items {
+  border-bottom: 1px solid $brand-grey;
+  // padding: 0 $spacing + 5;
+}
+
+.aside__icons {
+  width: 70px;
+  padding: $spacing + 5 0;
+  align-self: center;
+  text-align: center;
+  border-right: 1px solid $brand-grey;
+}
+
+.aside__text {
+  margin-bottom: 0;
+  align-self: center;
+  padding: $spacing;
+}

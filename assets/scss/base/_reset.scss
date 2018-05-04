@@ -1,0 +1,23 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: $brand-color;
+  background: $brand-grey;
+}
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+a {
+  color: $brand-color;
+  text-decoration: none !important;
+}

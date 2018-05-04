@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Awesome Dashboard</title>
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="assets/css/bootsrap.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+      <header>
+        <!-- Navbar lives here -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Account
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  Notifications
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <aside class="aside__left">
+          <ul class="aside__menuList">
+            <li class="aside__items">
+              <a href="#" class="aside__links d-flex">
+                <i class="icon-grid aside__icons"></i>
+                <p class="aside__text">Dashboard</p>
+              </a>
+            </li>
+            <li class="aside__items">
+              <a href="#" class="aside__links  d-flex">
+                <i class="icon-grid aside__icons"></i>
+                <p class="aside__text">Profile</p>
+              </a>
+            </li>
+            <li class="aside__items">
+              <a href="#" class="aside__links  d-flex">
+                <i class="icon-grid aside__icons"></i>
+                <p class="aside__text">Chart</p>
+              </a>
+            </li>
+          </ul>
+        </aside>
+        <section class="main-section">
+          <div class="panels">
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="assets//plugins/jquery.min.js"></script>
+    <script src="assets//plugins/popper.min.js"></script>
+    <script src="assets//plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets//plugins/notify.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      document.onreadystatechange = function() {
+        if (document.readyState === 'complete') {
+          //document ready
+          app.asideController();
+        }
+      }
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,34 @@
+.nav-open .wrapper {
+  transform: translateX(-#{$aside-width});
+}
+.wrapper {
+  position: relative;
+  transition: 1s all cubic-bezier(0.64, 0.43, 0.25, 1);
+  transform: translateX(0);
+  z-index: 3;
+  background: $brand-grey;
+  min-height: 100%;
+}
+.body__overlay {
+  position: fixed;
+  width: calc(100% - #{$aside-width});
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+main {
+  padding-top: $header-height;
+  /*exactly height of header*/
+}
+
+.main-section {
+  width: calc(100% - #{$aside-width});
+  margin-left: auto;
+  padding: $spacing * 2;
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+}
