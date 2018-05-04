@@ -9,7 +9,7 @@ var app = {
 
     function widthWatcher() {
       var msc = 0;
-      
+
       if (!$initialised) {
         // Cloned aside
         var $asideClone = $aside.cloneNode(true);
@@ -24,21 +24,22 @@ var app = {
         $body.appendChild($rightAside);
 
         // add event listener
-        $toggler.addEventListener("click", function (e) {
+        $toggler.addEventListener("click", function(e) {
+          var bodyClick = document.createElement("DIV");
+          bodyClick.className = "body__overlay";
           if (msc === 0) {
-             var bodyClick = document.createElement("DIV");
-             bodyClick.className = "body__overlay";
-             bodyClick.addEventListener("click", function(e) {
-               $html.classList.toggle("nav-open");
-               bodyClick.remove();
-             });
-             $body.appendChild(bodyClick);
-            $html.classList.toggle("nav-open");
+            bodyClick.addEventListener("click", function(e) {
+              $html.classList.remove("nav-open");
+              bodyClick.remove();
+            });
+            $body.appendChild(bodyClick);
+            $html.classList.add("nav-open");
             msc = 1;
           } else {
-            
+            $html.classList.remove('nav-open');
+            bodyClick.remove();
+            msc = 0;
           }
-         
         });
         $initialised = true;
       }

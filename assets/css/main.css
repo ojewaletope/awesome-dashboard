@@ -133,4 +133,8 @@ main {
   align-self: center;
   padding: 15px;
 }
+
+.aside__collapse {
+  background: #eeeeee;
+}
 /*# sourceMappingURL=main.css.map */

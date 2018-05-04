@@ -61,15 +61,30 @@
               </a>
             </li>
             <li class="aside__items">
-              <a href="#" class="aside__links  d-flex">
-                <i class="icon-grid aside__icons"></i>
+              <a class="aside__links  d-flex" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">
+                <i class="icon-briefcase aside__icons"></i>
                 <p class="aside__text">Profile</p>
               </a>
+              <ul class="collapse multi-collapse aside__collapse" id="collapseExample">
+                <li class="aside__items">
+                  <a href="#" class="aside__links d-flex">
+                    <i class="icon-briefcase aside__icons"></i>
+                    <p class="aside__text">Profile 1</p>
+                  </a>
+                </li>
+                <li class="aside__items">
+                  <a href="#" class="aside__links d-flex">
+                    <i class="icon-briefcase aside__icons"></i>
+                    <p class="aside__text">Profile 2</p>
+                  </a>
+                </li>
+              </ul>
             </li>
             <li class="aside__items">
               <a href="#" class="aside__links  d-flex">
-                <i class="icon-grid aside__icons"></i>
+                <i class="icon-chart aside__icons"></i>
                 <p class="aside__text">Chart</p>
+
               </a>
             </li>
           </ul>
@@ -121,7 +136,7 @@
     <script src="assets//plugins/notify.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-      document.onreadystatechange = function() {
+      document.onreadystatechange = function () {
         if (document.readyState === 'complete') {
           //document ready
           app.asideController();
